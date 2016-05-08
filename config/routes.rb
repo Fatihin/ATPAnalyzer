@@ -1,23 +1,6 @@
 Rails.application.routes.draw do
-  get 'index/admin'
 
-  get 'index/analyze'
-
-  get 'index/history'
-
-  get 'index/update'
-
-  get 'index/bidang'
-
-  get 'index/unjuran'
-
-  get 'index/lecturerload'
-
-  get 'index/bidangHistory'
-
-  get 'index/unjuranHistory'
-
-  get 'index/lecturerHistory'
+root 'atpcalculator#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

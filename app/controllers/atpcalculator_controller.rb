@@ -1,4 +1,8 @@
-class IndexController < ApplicationController
+class AtpcalculatorController < ApplicationController
+  
+  def index
+  end
+
   def admin
   end
 
