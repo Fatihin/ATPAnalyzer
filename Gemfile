@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #bootstrap-sass
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 #devise, flexible authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
