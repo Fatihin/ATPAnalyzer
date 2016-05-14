@@ -1,0 +1,37 @@
+<%= form_for(@bidang) do |f| %>
+  <% if @bidang.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bidang.errors.count, "error") %> prohibited this bidang from being saved:</h2>
+
+      <ul>
+      <% @bidang.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bidang_id %><br>
+    <%= f.text_field :bidang_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bidang_name %><br>
+    <%= f.text_field :bidang_name %>
+  </div>
+  <div class="field">
+    <%= f.label :bidang_desc %><br>
+    <%= f.text_field :bidang_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :result_bidang %><br>
+    <%= f.text_field :result_bidang %>
+  </div>
+  <div class="field">
+    <%= f.label :fac_id %><br>
+    <%= f.text_field :fac_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

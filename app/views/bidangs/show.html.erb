@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bidang:</strong>
+  <%= @bidang.bidang_id %>
+</p>
+
+<p>
+  <strong>Bidang name:</strong>
+  <%= @bidang.bidang_name %>
+</p>
+
+<p>
+  <strong>Bidang desc:</strong>
+  <%= @bidang.bidang_desc %>
+</p>
+
+<p>
+  <strong>Result bidang:</strong>
+  <%= @bidang.result_bidang %>
+</p>
+
+<p>
+  <strong>Fac:</strong>
+  <%= @bidang.fac_id %>
+</p>
+
+<%= link_to 'Edit', edit_bidang_path(@bidang) %> |
+<%= link_to 'Back', bidangs_path %>

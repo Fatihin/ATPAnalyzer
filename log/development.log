@@ -1,0 +1,142 @@
+  [1m[36m (563.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (586.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFaculties (20160514052051)
+  [1m[35m (312.6ms)[0m  CREATE TABLE `faculties` (`id` int(11) auto_increment PRIMARY KEY, `fac_id` varchar(255), `fac_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160514052051')
+  [1m[36m (31.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'faculties'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `faculties`
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBidangs (20160514053112)
+  [1m[35m (234.4ms)[0m  CREATE TABLE `bidangs` (`id` int(11) auto_increment PRIMARY KEY, `bidang_id` varchar(255), `bidang_name` varchar(255), `bidang_desc` varchar(255), `result_bidang` varchar(255), `fac_id` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160514053112')
+  [1m[36m (31.3ms)[0m  [1mCOMMIT[0m
+Migrating to Bidang (20160514053239)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Bidang (20160514053239)
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Bidang (20160514053239)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Bidang (20160514053239)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateHistories (20160514054055)
+  [1m[35m (421.9ms)[0m  CREATE TABLE `histories` (`id` int(11) auto_increment PRIMARY KEY, `history_id` varchar(255), `lec_id` int(11), `bidang_id` varchar(255), `unjuran_id` varchar(255), `fac_id` varchar(255), `year` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160514054055')
+  [1m[36m (46.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateWorkloads (20160514054643)
+  [1m[35m (281.3ms)[0m  CREATE TABLE `workloads` (`id` int(11) auto_increment PRIMARY KEY, `load_id` int(11), `lec_id` int(11), `ks_dip` int(11), `ps_dip` int(11), `ks_deg` int(11), `ps_deg` int(11), `total_dip` int(11), `total_deg` int(11), `ks_postgrade` int(11), `ps_postgrade` int(11), `total_postgrade` int(11), `k1` int(11), `k2` int(11), `k3` int(11), `KTS` int(11), `ATP` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160514054643')
+  [1m[36m (93.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'bidangs'
+[0m
+  [1m[35m (15.6ms)[0m  SHOW CREATE TABLE `bidangs`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'faculties'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `faculties`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'histories'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `histories`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'workloads'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `workloads`
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateLecturers (20160514055336)
+  [1m[35m (281.3ms)[0m  CREATE TABLE `lecturers` (`id` int(11) auto_increment PRIMARY KEY, `lec_id` int(11), `name` varchar(255), `state` varchar(255), `campus` varchar(255), `gred` varchar(255), `ATS_diff` varchar(255), `committee` varchar(255), `trek` varchar(255), `office_admin` varchar(255), `academic` varchar(255), `position_status` varchar(255), `result_lecturer` varchar(255), `fac_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160514055336')
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'bidangs'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `bidangs`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'faculties'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `faculties`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'histories'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `histories`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'lecturers'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `lecturers`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ATPAnalyzer_development'
+  AND fk.table_name = 'workloads'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `workloads`

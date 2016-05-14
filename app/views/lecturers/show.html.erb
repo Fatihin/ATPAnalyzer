@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lec:</strong>
+  <%= @lecturer.lec_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lecturer.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @lecturer.state %>
+</p>
+
+<p>
+  <strong>Campus:</strong>
+  <%= @lecturer.campus %>
+</p>
+
+<p>
+  <strong>Gred:</strong>
+  <%= @lecturer.gred %>
+</p>
+
+<p>
+  <strong>Ats diff:</strong>
+  <%= @lecturer.ATS_diff %>
+</p>
+
+<p>
+  <strong>Committee:</strong>
+  <%= @lecturer.committee %>
+</p>
+
+<p>
+  <strong>Trek:</strong>
+  <%= @lecturer.trek %>
+</p>
+
+<p>
+  <strong>Office admin:</strong>
+  <%= @lecturer.office_admin %>
+</p>
+
+<%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
+<%= link_to 'Back', lecturers_path %>
