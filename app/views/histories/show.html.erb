@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>History:</strong>
+  <%= @history.history_id %>
+</p>
+
+<p>
+  <strong>Lec:</strong>
+  <%= @history.lec_id %>
+</p>
+
+<p>
+  <strong>Bidang:</strong>
+  <%= @history.bidang_id %>
+</p>
+
+<p>
+  <strong>Unjuran:</strong>
+  <%= @history.unjuran_id %>
+</p>
+
+<p>
+  <strong>Fac:</strong>
+  <%= @history.fac_id %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @history.year %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

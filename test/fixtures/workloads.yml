@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  load_id: 1
+  lec_id: 1
+  ks_dip: 1
+  ps_dip: 1
+  ks_deg: 1
+  ps_deg: 1
+  total_dip: 1
+  total_deg: 1
+  ks_postgrade: 1
+  ps_postgrade: 1
+  total_postgrade: 1
+  k1: 1
+  k2: 1
+  k3: 1
+  KTS: 1
+  ATP: 1
+
+two:
+  load_id: 1
+  lec_id: 1
+  ks_dip: 1
+  ps_dip: 1
+  ks_deg: 1
+  ps_deg: 1
+  total_dip: 1
+  total_deg: 1
+  ks_postgrade: 1
+  ps_postgrade: 1
+  total_postgrade: 1
+  k1: 1
+  k2: 1
+  k3: 1
+  KTS: 1
+  ATP: 1

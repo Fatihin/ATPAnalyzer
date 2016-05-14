@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bidang_id: MyString
+  bidang_name: MyString
+  bidang_desc: MyString
+  result_bidang: MyString
+  fac_id: MyString
+
+two:
+  bidang_id: MyString
+  bidang_name: MyString
+  bidang_desc: MyString
+  result_bidang: MyString
+  fac_id: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lec_id: 1
+  name: MyString
+  state: MyString
+  campus: MyString
+  gred: MyString
+  ATS_diff: MyString
+  committee: MyString
+  trek: MyString
+  office_admin: MyString
+
+two:
+  lec_id: 1
+  name: MyString
+  state: MyString
+  campus: MyString
+  gred: MyString
+  ATS_diff: MyString
+  committee: MyString
+  trek: MyString
+  office_admin: MyString

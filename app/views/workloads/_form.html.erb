@@ -1,0 +1,81 @@
+<%= form_for(@workload) do |f| %>
+  <% if @workload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workload.errors.count, "error") %> prohibited this workload from being saved:</h2>
+
+      <ul>
+      <% @workload.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :load_id %><br>
+    <%= f.number_field :load_id %>
+  </div>
+  <div class="field">
+    <%= f.label :lec_id %><br>
+    <%= f.number_field :lec_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ks_dip %><br>
+    <%= f.number_field :ks_dip %>
+  </div>
+  <div class="field">
+    <%= f.label :ps_dip %><br>
+    <%= f.number_field :ps_dip %>
+  </div>
+  <div class="field">
+    <%= f.label :ks_deg %><br>
+    <%= f.number_field :ks_deg %>
+  </div>
+  <div class="field">
+    <%= f.label :ps_deg %><br>
+    <%= f.number_field :ps_deg %>
+  </div>
+  <div class="field">
+    <%= f.label :total_dip %><br>
+    <%= f.number_field :total_dip %>
+  </div>
+  <div class="field">
+    <%= f.label :total_deg %><br>
+    <%= f.number_field :total_deg %>
+  </div>
+  <div class="field">
+    <%= f.label :ks_postgrade %><br>
+    <%= f.number_field :ks_postgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :ps_postgrade %><br>
+    <%= f.number_field :ps_postgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :total_postgrade %><br>
+    <%= f.number_field :total_postgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :k1 %><br>
+    <%= f.number_field :k1 %>
+  </div>
+  <div class="field">
+    <%= f.label :k2 %><br>
+    <%= f.number_field :k2 %>
+  </div>
+  <div class="field">
+    <%= f.label :k3 %><br>
+    <%= f.number_field :k3 %>
+  </div>
+  <div class="field">
+    <%= f.label :KTS %><br>
+    <%= f.number_field :KTS %>
+  </div>
+  <div class="field">
+    <%= f.label :ATP %><br>
+    <%= f.number_field :ATP %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

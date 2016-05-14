@@ -1,0 +1,2 @@
+module BidangsHelper
+end

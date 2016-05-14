@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Workloads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Load</th>
+      <th>Lec</th>
+      <th>Ks dip</th>
+      <th>Ps dip</th>
+      <th>Ks deg</th>
+      <th>Ps deg</th>
+      <th>Total dip</th>
+      <th>Total deg</th>
+      <th>Ks postgrade</th>
+      <th>Ps postgrade</th>
+      <th>Total postgrade</th>
+      <th>K1</th>
+      <th>K2</th>
+      <th>K3</th>
+      <th>Kts</th>
+      <th>Atp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workloads.each do |workload| %>
+      <tr>
+        <td><%= workload.load_id %></td>
+        <td><%= workload.lec_id %></td>
+        <td><%= workload.ks_dip %></td>
+        <td><%= workload.ps_dip %></td>
+        <td><%= workload.ks_deg %></td>
+        <td><%= workload.ps_deg %></td>
+        <td><%= workload.total_dip %></td>
+        <td><%= workload.total_deg %></td>
+        <td><%= workload.ks_postgrade %></td>
+        <td><%= workload.ps_postgrade %></td>
+        <td><%= workload.total_postgrade %></td>
+        <td><%= workload.k1 %></td>
+        <td><%= workload.k2 %></td>
+        <td><%= workload.k3 %></td>
+        <td><%= workload.KTS %></td>
+        <td><%= workload.ATP %></td>
+        <td><%= link_to 'Show', workload %></td>
+        <td><%= link_to 'Edit', edit_workload_path(workload) %></td>
+        <td><%= link_to 'Destroy', workload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Workload', new_workload_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bidangs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bidang</th>
+      <th>Bidang name</th>
+      <th>Bidang desc</th>
+      <th>Result bidang</th>
+      <th>Fac</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bidangs.each do |bidang| %>
+      <tr>
+        <td><%= bidang.bidang_id %></td>
+        <td><%= bidang.bidang_name %></td>
+        <td><%= bidang.bidang_desc %></td>
+        <td><%= bidang.result_bidang %></td>
+        <td><%= bidang.fac_id %></td>
+        <td><%= link_to 'Show', bidang %></td>
+        <td><%= link_to 'Edit', edit_bidang_path(bidang) %></td>
+        <td><%= link_to 'Destroy', bidang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bidang', new_bidang_path %>
