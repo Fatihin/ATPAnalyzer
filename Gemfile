@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-#Devise
-gem 'devise', '~> 4.1'
+
 #Bootstrap SASS
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record

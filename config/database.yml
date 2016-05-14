@@ -14,12 +14,12 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: QwEr!2#4
   host: localhost
 
 development:
   <<: *default
-  database: ATPAnalyzer_development
+  database: ATPAnalyzer
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

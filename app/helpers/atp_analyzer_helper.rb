@@ -1,0 +1,2 @@
+module AtpAnalyzerHelper
+end
